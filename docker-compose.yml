@@ -17,3 +17,12 @@ services:
 
 volumes:
   postgres_data:
+
+
+
+# this is script which is written in package.json file!
+"scripts": {
+  "go": "nodemon server.js",          
+  "migrate": "npx prisma migrate dev",
+  "studio": "npx prisma studio"       
+  }
