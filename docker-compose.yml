@@ -1,0 +1,19 @@
+ # **Prisma Docker Compose Configuration**
+
+name: prisma
+
+services:
+  postgres:
+    container_name: prisma-postgres
+    image: postgres:16
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: prisma
+      POSTGRES_DB: prisma
+      POSTGRES_PASSWORD: prisma
+
+volumes:
+  postgres_data:
